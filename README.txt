@@ -58,25 +58,3 @@ Priti Prabhu
 ## License
 This project is for learning and demonstration purposes.
 
-
-
-[
-  {
-    "id": "6873f1bf7810ba3b0400fc7b",
-    "title": "Complete MongoDB integration",
-    "description": "Connect API to MongoDB using driver",
-    "status": "In Progress",
-    "dueDate": "2025-07-13T17:46:29.178Z",
-    "assignedTo": "Priti Prabhu",
-    "projectId": "project001"
-  },
-  {
-    "id": "6873f1bf7810ba3b0400fc72",
-    "title": "Test MongoDB integration",
-    "description": "Test the Connection of API to MongoDB through inserting values",
-    "status": "In Progress",
-    "dueDate": "2025-07-13T17:46:29.178Z",
-    "assignedTo": "Priti Prabhu",
-    "projectId": "project001"
-  }
-]
