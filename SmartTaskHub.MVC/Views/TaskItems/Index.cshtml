@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SmartTaskHub.MVC.Models.TaskItem>
+
+@{
+    ViewData["Title"] = "Task List";
+}
+
+
+
+<h2>Task List</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">+ Create New Task</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th>Assigned To</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Status</td>
+                <td>@item.DueDate.ToString("dd-MMM-yyyy")</td>
+                <td>@item.AssignedTo</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

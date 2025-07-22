@@ -1,0 +1,29 @@
+﻿@model SmartTaskHub.MVC.Models.TaskItem
+
+@{
+    ViewData["Title"] = "Task Details";
+}
+
+<h2>Task Details</h2>
+
+<div class="mb-3">
+    <strong>Title:</strong> @Model.Title
+</div>
+<div class="mb-3">
+    <strong>Description:</strong> @Model.Description
+</div>
+<div class="mb-3">
+    <strong>Status:</strong> @Model.Status
+</div>
+<div class="mb-3">
+    <strong>Due Date:</strong> @Model.DueDate.ToString("dd-MMM-yyyy")
+</div>
+<div class="mb-3">
+    <strong>Assigned To:</strong> @Model.AssignedTo
+</div>
+<div class="mb-3">
+    <strong>Project Id:</strong> @Model.ProjectId
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
